@@ -1,18 +1,28 @@
+<%= render 'form' %>
+
 <div class="panel panel-default">
   <div class="panel-heading">
-    メッセージ一覧
+    映画一覧
   </div>
 
   <div class="panel-body">
     <% @messages.each do |message| %>
-      <span class="label label-info"><%= message.name %></span>
-        <%= message.body %>
-        (<%= link_to "edit" , edit_message_path(message) %>)
-         <%= link_to "destroy" , message , method: :delete, data: { confirm: '削除してもよろしいですか？' } %>
-        )
-      <br>
+      <br><br>
+        <%= image_tag 'ズートピア.jpg' %>
+        <br>1 ズートピア<br>
+        17:00- ユーロスペース<br>
+        21:30- 新宿バルト9<br>
+      <br><br>
+        <%= image_tag 'ディストラクション・ベイビーズ.jpg' %>
+        <br>2 ディストラクション・ベイビーズ<br>
+        18:10- 池袋HUMAXシネマズ<br>
+        21:30- 渋谷シネパレス<br>
+      <br><br>
+        <%= image_tag '世界から猫が消えたなら.jpg' %>
+        <br>3 世界から猫が消えたなら<br>
+        17:00- 新宿バルト9<br>
+        21:30- 丸の内TOEI<br>
+      <br><br>
     <% end %>
   </div>
 </div>
-
-<%= render 'form' %>

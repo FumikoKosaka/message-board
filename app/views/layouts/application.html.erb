@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MessageBoard</title>
+  <title>Film Now</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv_mVmtqYGXoeXyQjj0Zt6KCHeMmtl2Vs"></script>
 </head>
 <body>
   <nav class="navbar">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Message Board</a>
+        <a class="navbar-brand" href="#">Film Now</a>
       </div>
     </div>
-  </nav>
-
- <div class="container">
+　</nav>
+  <div class="container">
     <% if notice %>
       <div class="alert alert-info">
         <%= notice %>
       </div>
     <% end %>
-    
     <%= yield %>
   </div>
 </body>
+
 </html>
